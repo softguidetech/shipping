@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_car_ticket_tree" model="ir.ui.view">
+        <field name="name">car.ticket.tree</field>
+        <field name="model">car.ticket</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="ticket_no"/>
+                <field name="booking_no"/>
+                <field name="ticket_type"/>
+                <field name="departure_date"/>
+                <field name="route_no"/>
+                <field name="price"/>
+                <field name="passenger_name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_car_ticket_form" model="ir.ui.view">
+        <field name="name">car.ticket.form</field>
+        <field name="model">car.ticket</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="ticket_no"/>
+                        <field name="booking_no"/>
+                        <field name="ticket_type"/>
+                        <field name="departure_date"/>
+                        <field name="route_no"/>
+                        <field name="price"/>
+                        <field name="passenger_name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_car_ticket" model="ir.actions.act_window">
+        <field name="name">Car Tickets</field>
+        <field name="res_model">car.ticket</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_car_ticket_root" name="Car Ticket Management" sequence="10"/>
+    <menuitem id="menu_car_ticket" name="Tickets" parent="menu_car_ticket_root" action="action_car_ticket" sequence="10"/>
+
+</odoo>
