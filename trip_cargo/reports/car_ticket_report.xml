@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- QWeb Reports -->
+    <record id="car_ticket_action_report" model="ir.actions.report">
+        <field name="name">Car Ticket</field>
+        <field name="model">trip.trip</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">trip_cargo.car_ticket_report_template</field>
+        <field name="report_file">trip_cargo.car_ticket_report_template</field>
+        <field name="print_report_name">'Car Ticket - %s' % object.ticket_no</field>
+        <field name="binding_model_id" ref="trip_cargo.model_trip_trip"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>
