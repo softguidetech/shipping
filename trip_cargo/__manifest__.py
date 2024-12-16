@@ -11,9 +11,10 @@
         'view/trip_trip_view.xml',
         'view/location_location_view.xml',
         'reports/trip_report.xml',
+        'reports/car_ticket_layout.xml',
         'reports/car_ticket_report_template.xml',
         'reports/car_ticket_report.xml',
-        'reports/car_ticket_layout.xml',
+        
        
     ],
     "author": "SGT",
