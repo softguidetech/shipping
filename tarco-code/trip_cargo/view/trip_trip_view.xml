@@ -47,7 +47,7 @@
                         </button>
                     
                     </div>
-                        <group>
+                        <group col="4" colspan="4">
                             
                                  <field name="name" attrs="{'readonly': [('state','!=','draft')]}"/>
                                  <field name="ticket_number" attrs="{'readonly': [('state','!=','draft')]}"/>
@@ -69,6 +69,7 @@
                                 <field name="manufacturing_year" attrs="{'readonly': [('state','!=','draft')]}"/>
                                 <field name="plate_number" attrs="{'readonly': [('state','!=','draft')]}"/>
                                 <field name="chassis_number" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="driver_id" attrs="{'readonly': [('state','!=','draft')]}"/>
                                 
                         
                            </group>
