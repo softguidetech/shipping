@@ -24,13 +24,34 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="ticket_no"/>
-                        <field name="booking_no"/>
-                        <field name="ticket_type"/>
-                        <field name="departure_date"/>
-                        <field name="route_no"/>
-                        <field name="price"/>
-                        <field name="passenger_name"/>
+                        <group>
+                            <field name="ticket_no"/>
+                            <field name="booking_no"/>
+                            <field name="ticket_type"/>
+                            <field name="departure_date"/>
+                            <field name="route_no"/>
+                            <field name="price"/>
+                            <field name="passenger_name"/>
+                        </group>
+                        <group>
+                            <field name="pnr"/>
+                            <field name="origin_port"/>
+                            <field name="destination_port"/>
+                            <field name="date"/>
+                            <field name="model_in_english"/>
+                            <field name="crossing_number"/>
+                            <field name="crossing_date"/>
+                            <field name="shipper_name_english"/>
+                            <field name="shipper_name_arabic"/>
+                            <field name="consignee_name_english"/>
+                            <field name="consignee_name_arabic"/>
+                            <field name="vehicle_type"/>
+                            <field name="manufacturing_english"/>
+                            <field name="manufacturing_arabic"/>
+                            <field name="manufacturing_year"/>
+                            <field name="plate_number"/>
+                            <field name="chassis_number"/>
+                        </group>
                     </group>
                 </sheet>
             </form>

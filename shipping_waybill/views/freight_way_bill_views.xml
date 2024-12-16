@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_waybill_tree" model="ir.ui.view">
+        <field name="name">waybill.tree</field>
+        <field name="model">freight.waybill</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="bill_number"/>
+                <field name="bill_date"/>
+                <field name="shipper_name"/>
+                <field name="recipient_name"/>
+                <field name="weight"/>
+                <field name="num_parcels"/>
+                <field name="total_amount"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_waybill_form" model="ir.ui.view">
+        <field name="name">waybill.form</field>
+        <field name="model">freight.waybill</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="bill_number"/>
+                        <field name="bill_date"/>
+                        <field name="place"/>
+                    </group>
+                    <group string="Shipper Details">
+                        <field name="shipper_name"/>
+                        <field name="shipper_address"/>
+                        <field name="shipper_contact"/>
+                    </group>
+                    <group string="Recipient Details">
+                        <field name="recipient_name"/>
+                        <field name="recipient_address"/>
+                        <field name="recipient_contact"/>
+                    </group>
+                    <group>
+                        <field name="insurance_amount"/>
+                        <field name="weight"/>
+                        <field name="description"/>
+                        <field name="num_parcels"/>
+                        <field name="parcel_status"/>
+                        <field name="category"/>
+                        <field name="additional_charges"/>
+                        <field name="tax"/>
+                        <field name="total_amount" readonly="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- <menuitem id="freight_waybill_menu" name="Freight Waybills" parent="base.menu_sales"/> -->
+    <record id="action_waybill" model="ir.actions.act_window">
+        <field name="name">Waybills</field>
+        <field name="res_model">freight.waybill</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="shipping_menu_root" name="Shipping" sequence="10"/>
+    <menuitem id="menu_shipping" name="Shipping" parent="shipping_menu_root" action="action_waybill" sequence="10"/>
+
+</odoo>

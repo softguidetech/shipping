@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- QWeb Reports -->
+    <record id="freight_waybill_action_report" model="ir.actions.report">
+        <field name="name">Freight Waybill</field>
+        <field name="model">freight.waybill</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">shipping_waybill.shipping_waybill_report_template</field>
+        <field name="report_file">shipping_waybill.shipping_waybill_report_template</field>
+        <field name="print_report_name">'Freight Waybill - %s' % object.bill_number</field>
+        <field name="binding_model_id" ref="shipping_waybill.model_freight_waybill"/>
+        <field name="paperformat_id" ref="shipping_waybill.paperformat_euro_shipping"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>
