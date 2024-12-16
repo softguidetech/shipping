@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="shipping_waybill_report_template">
+        <t t-call="web.html_container">
+            <t t-set="company" t-value="request.env.company"/>
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.basic_layout">
+                    <div class="row pb-2">
+                         <!-- style="border-bottom:3px solid black;" -->
+                        <div class="col-7">
+                            <img src="/shipping_waybill/static/src/img/tarco_shipping.png" style="max-height: 100px;" alt="Logo"/>
+                        </div>
+                        <div class="col-4">
+                            <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 120px;" alt="Logo"/>
+                        </div>
+                    </div>
+                    <div class="row pt-2">
+                        <div class="col-4 p-2">
+                            <div class="h4 p-1" style="border-bottom: 1px dotted black;">
+                                <span style="display: inline-block; width: 15px; height: 15px; background-color: red; margin-right: 8px;"></span>
+                                Bill No:
+                            </div>
+                        </div>
+                        <div class="col-4 p-2">
+                            <div class="h4 p-1" style="border-bottom: 1px dotted black;">
+                                <span style="display: inline-block; width: 15px; height: 15px; background-color: red; margin-right: 8px;"></span>
+                                Bill Date:
+                            </div>
+                        </div>
+                        <div class="col-4 p-2">
+                            <div class="h4 p-1" style="border-bottom: 1px dotted black;">
+                                <span style="display: inline-block; width: 15px; height: 15px; background-color: red; margin-right: 8px;"></span>
+                                Place:
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="m-1" style="border:2px solid black;border-radius:17px;">
+                                <div class="pb-5" style="height:150px;">
+                                    <span class="p-3 h5">Shipper Details :</span>
+                                </div>
+                                <div style="border-top:2px solid black;">
+                                    <span class="p-3 h5">Name :</span>
+                                </div>
+                                <div class="pb-5" style="border-top:2px solid black;height:150px;">
+                                    <span class="p-3 h5">Address :</span>
+                                </div>
+                                <div style="border-top:2px solid black;">
+                                    <span class="p-3 h5">Contact No :</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="m-1" style="border:2px solid black;border-radius:15px;">
+                                <div class="pb-5">
+                                    <span class="p-3 h5"></span>
+                                </div>
+                            </div>
+
+                            <div class="m-1">
+                                <p>
+                                    Shipper certiﬁes that the particulars on the face hereof are correct and
+                                    that insofar as any part of the consignment contains dangerous goods,
+                                    such part is properly described by name and is in proper condition for
+                                    carriage by according to the applicable Dangerous Goods Regulations.
+                                </p>
+                                <p>
+                                    Shipper certiﬁes that the particulars on the face hereof are correct and
+                                    that insofar as any part of the consignment contains dangerous goods,
+                                    such part is properly described by name and is in proper condition for
+                                    carriage by according to the applicable Dangerous Goods Regulations.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6"/>
+                        <div class="col-6">
+                            <div class="m-1" style="border:2px solid black;border-radius:15px;">
+                                <div class="">
+                                    <span class="p-3">
+                                        Signature of Shipper/his Agent ________________ Signature
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+                    <div class="row pt-3">
+                        <div class="col-6">
+                            <div class="m-1" style="border:2px solid black;border-radius:17px;">
+                                <div class="pb-5" style="height:150px;">
+                                    <span class="p-3 h5">Recipient Details :</span>
+                                </div>
+                                <div style="border-top:2px solid black;">
+                                    <span class="p-3 h5">Name :</span>
+                                </div>
+                                <div class="pb-5" style="border-top:2px solid black;height:150px;">
+                                    <span class="p-3 h5">Address :</span>
+                                </div>
+                                <div style="border-top:2px solid black;">
+                                    <span class="p-3 h5">Contact No :</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 m-1">
+
+                            <table class="table table-sm text-center" style="border: 2px solid black; border-radius:15px;">
+                                <tr>
+                                    <td colspan="2">Point of Delivery</td>
+                                    <td colspan="2">Clearance</td>
+                                    <td colspan="3">Type of Bill</td>
+                                    <td colspan="3">Payment</td>
+                                </tr>
+                                <tr>
+                                    <td>State</td>
+                                    <td>City</td>
+                                    <td>Agent</td>
+                                    <td>Com</td>
+                                    <td>Normal</td>
+                                    <td>Empress</td>
+                                    <td>Comme.</td>
+                                    <td>Cash</td>
+                                    <td>Mutual</td>
+                                    <td>ARR</td>
+                                </tr>
+                                <tr>
+                                    <td class="pt-4"></td>
+                                    <td class="pt-4"></td>
+                                    <td class="pt-4"></td>
+                                    <td class="pt-4"></td>
+                                    <td class="pt-4"></td>
+                                    <td class="pt-4"></td>
+                                    <td class="pt-4"></td>
+                                    <td class="pt-4"></td>
+                                    <td class="pt-4"></td>
+                                    <td class="pt-4"></td>
+                                </tr>
+                            </table>
+
+                            <div class="m-1">
+                                <p>
+                                    INSURANCE – If Carrier of fers insurance, and such insurance is
+                                    re que ste d in accordance with the conditions there of, indic ate
+                                    amount to b e insure d in figure s in b ox marke d "Amount of Insurance
+                                </p>
+                                <p>
+                                    INSURANCE – If Carrier of fers insurance, and such insurance is
+                                    re que ste d in accordance with the conditions there of, indic ate
+                                    amount to b e insure d in figure s in b ox marke d "Amount of Insurance
+                                </p>
+                            </div>
+
+                            <div class="m-1">
+                                <span class="p-2" style="border: 2px solid black; border-radius:15px 0px 0px 15px;">Lnsurance Amount</span>
+                                <span class="p-2" style="border: 2px solid black; border-radius:0px 15px 15px 0px;">
+                                    wdjci
+                                </span>
+                            </div>
+
+                            <div class="m-1 pt-3">
+                                <span class="p-2">Dest of Tructing.</span>
+                                TO <span style="display: inline-block; width: 15px; height: 15px; margin-right: 8px; border: 1px solid black; border-radius:5px;"></span>
+                                TO <span style="display: inline-block; width: 15px; height: 15px; margin-right: 8px; border: 1px solid black; border-radius:5px;"></span>
+                                TO <span style="display: inline-block; width: 15px; height: 15px; margin-right: 8px; border: 1px solid black; border-radius:5px;"></span>
+                                TO <span style="display: inline-block; width: 15px; height: 15px; margin-right: 8px; border: 1px solid black; border-radius:5px;"></span>
+                                TO <span style="display: inline-block; width: 15px; height: 15px; margin-right: 8px; border: 1px solid black; border-radius:5px;"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+                    <div class="row">
+                        <table class="table table-sm" style="border:2px solid black;">
+                            <thead>
+                                <tr>
+                                    <th>No PCS</th>
+                                    <th>Weight kg</th>
+                                    <th>Description</th>
+                                    <th>Parcel status</th>
+                                    <th>Category</th>
+                                    <th>Other charges of Handling</th>
+                                    <th>Rate currency</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
