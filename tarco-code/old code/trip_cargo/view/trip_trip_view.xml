@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+     
+        <record id="view_trip_trip_form" model="ir.ui.view">
+            <field name="name">trip_trip_form</field>
+            <field name="model">trip.trip</field>
+            <field name="arch" type="xml">
+                <form> 
+                
+                    <header>
+                        <button name="action_submit"
+                                type="object"
+                                class="btn btn-primary"
+                                string="Submit" />
+                       
+                    </header>
+                   <sheet>
+                        <group>
+                            
+                                 <field name="name"/>
+                                <field name="source_loc"/>
+                                <field name="des_loc"/>
+                                <field name="date"/>
+                                <field name="truck_id"/>
+                                <field name="driver_id"/>
+                        
+                           </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+      
+        <record id="view_trip_trip_tree" model="ir.ui.view">
+            <field name="name">trip_trip_tree</field>
+            <field name="model">trip.trip</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="source_loc"/>
+                    <field name="des_loc"/>
+                    <field name="date"/>
+                    <field name="truck_id"/>
+                    <field name="driver_id"/>
+                </tree>
+            </field>
+        </record>
+        
+         <record id="sequence_trip_code" model="ir.sequence">
+            <field name="name">Trip code Reference</field>
+            <field name="code">trip.trip.code</field>
+            <field name="prefix">/%(range_year)s/</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field eval="True" name="use_date_range"/>
+            <field eval="False" name="company_id"/>
+            <field name="padding">4</field>
+        </record>
+
+       
+        <record id="action_trip_request" model="ir.actions.act_window">
+            <field name="name">Trip Request</field>
+            <field name="res_model">trip.trip</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem id="cargo_main_menu" name="Cargo" web_icon="trip_cargo,icon.jpg"/>
+
+        <menuitem id="menu_trip" parent="cargo_main_menu" name="Trip Request"
+                  action="action_trip_request"/>
+    </data>
+</odoo>
