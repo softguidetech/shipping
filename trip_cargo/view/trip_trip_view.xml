@@ -70,6 +70,8 @@
                                 <field name="plate_number" attrs="{'readonly': [('state','!=','draft')]}"/>
                                 <field name="chassis_number" attrs="{'readonly': [('state','!=','draft')]}"/>
                                 <field name="driver_id" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="ticket_amount" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                
                                 
                         
                            </group>
