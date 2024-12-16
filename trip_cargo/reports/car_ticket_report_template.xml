@@ -4,7 +4,7 @@
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="doc">
                 <!-- <t t-set="lang" t-value="o.partner_id.lang"/> -->
-                <t t-call="ticket_cargo.car_ticket_layout">
+                <!--<t t-call="ticket_cargo.car_ticket_layout">-->
                     <div class="page" style="font-family: 'Arial', sans-serif; font-size: 12px;">
 
                         <table class="table o_main_table table-bordered h5 text-center" name="invoice_line_table">
@@ -130,7 +130,7 @@
                             <!--<p>6. The passenger shall comply with the terms and conditions of the written travel instructions or travel instructions announced by the company.</p>-->
                         </div>
                     </div>
-                </t>
+                <!--</t>-->
             </t>
         </t>
     </template>
