@@ -15,11 +15,12 @@
     "license": "LGPL-3",
 
     # Dependency
-    "depends": ['web', 'base'],
+    "depends": ['web', 'base','fleet'],
 
     "data": [
         "security/ir.model.access.csv",
         "views/car_ticket_views.xml",
+        "views/location_location_view.xml",
         "reports/car_ticket_layout.xml",
         "reports/car_ticket_report_template.xml",
         "reports/car_ticket_report.xml",
