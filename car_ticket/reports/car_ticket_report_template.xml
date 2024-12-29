@@ -12,7 +12,7 @@
                                 <tr>
                                     <th name="th_booking_no"><span></span></th>
                                     <th name="th_ticket_type"><span>العباره</span></th>
-                                    <th name="th_ticket_no"><span t-field="doc.odel_in_english.name"></span></th>
+                                    <th name="th_ticket_no"><span t-field="doc.model_in_english.name"></span></th>
                                     <th name="th_dep_date"><span t-field="doc.origin_port.name"></span> - <span t-field="doc.destination_port.name"></span></th>
                                 </tr>
                                 <tr>
