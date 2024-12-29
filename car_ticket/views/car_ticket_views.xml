@@ -48,32 +48,32 @@
                     
                     </div>
                         <group col="4" colspan="4">
-                            
-                                 <field name="name" attrs="{'readonly': [('state','!=','draft')]}"/>
-                                 <field name="ticket_number" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <group>
+                                 <field name="pnr" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                 <field name="ticket_no" attrs="{'readonly': [('state','!=','draft')]}"/>
                                  <field name="ticket_type" attrs="{'readonly': [('state','!=','draft')]}"/>
-                                <field name="source_loc" attrs="{'readonly': [('state','!=','draft')]}"/>
-                                <field name="des_loc" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="origin_port" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="destination_port" attrs="{'readonly': [('state','!=','draft')]}"/>
                                 <field name="date" attrs="{'readonly': [('state','!=','draft')]}"/>
-                                <field name="truck_id" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="model_in_english" attrs="{'readonly': [('state','!=','draft')]}"/>
                                 <field name="crossing_number" attrs="{'readonly': [('state','!=','draft')]}"/>
                                 <field name="crossing_date" attrs="{'readonly': [('state','!=','draft')]}"/>
-                                <field name="shipper_name_en" attrs="{'readonly': [('state','!=','draft')]}"/>
-                                <field name="shipper_name_ar" attrs="{'readonly': [('state','!=','draft')]}"/>
-                                <field name="consignee_name_en" attrs="{'readonly': [('state','!=','draft')]}"/>
-                                <field name="consignee_name_ar" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="shipper_name_english" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="shipper_name_arabic" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="consignee_name_english" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="consignee_name_arabic" attrs="{'readonly': [('state','!=','draft')]}"/>
                                 <field name="vehicle_type" attrs="{'readonly': [('state','!=','draft')]}"/>
-                                <field name="manufacturing_en" attrs="{'readonly': [('state','!=','draft')]}"/>
-                                <field name="manufacturing_ar" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="manufacturing_english" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="manufacturing_arabic" attrs="{'readonly': [('state','!=','draft')]}"/>
                                 <!--<field name="truck_id"/>-->
                                 <field name="manufacturing_year" attrs="{'readonly': [('state','!=','draft')]}"/>
                                 <field name="plate_number" attrs="{'readonly': [('state','!=','draft')]}"/>
                                 <field name="chassis_number" attrs="{'readonly': [('state','!=','draft')]}"/>
-                                <field name="driver_id" attrs="{'readonly': [('state','!=','draft')]}"/>
-                                <field name="ticket_amount" attrs="{'readonly': [('state','!=','draft')]}"/>
-                                
-                                
-                        
+                                <!--<field name="driver_id" attrs="{'readonly': [('state','!=','draft')]}"/>-->
+                                <field name="price" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="note" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="term" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            </group>
                            </group>
                     </sheet>
 
@@ -86,13 +86,13 @@
             <field name="model">car.ticket</field>
             <field name="arch" type="xml">
                 <tree>
-                    <field name="name"/>
-                    <field name="source_loc"/>
-                    <field name="des_loc"/>
-                    <field name="shipper_name_en"/>
-                    <field name="consignee_name_en"/>
+                    <field name="pnr"/>
+                    <field name="origin_port"/>
+                    <field name="destination_port"/>
+                    <field name="shipper_name_english"/>
+                    <field name="consignee_name_english"/>
                     <field name="vehicle_type"/>
-                    <field name="truck_id"/>
+                    <!--<field name="truck_id"/>-->
                     <field name="manufacturing_year"/>
                     <field name="plate_number"/>
                     <field name="chassis_number"/>
