@@ -129,7 +129,7 @@ class LocaLoca(models.Model):
 class AccountMove(models.Model):
     _inherit = 'account.move'
     
-    trip_id = fields.Many2one('trip.trip',string='Trip')
+    trip_id = fields.Many2one('car.ticket',string='Trip')
     
 
 

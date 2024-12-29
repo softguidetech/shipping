@@ -12,7 +12,7 @@
                                 <tr>
                                     <th><span/></th>
                                     
-                                    <th><span t-field="doc.model_in_arabic.name"/></th>
+                                    <th><span t-field="doc.model_in_english.name"/></th>
                                     <th><span>العباره</span></th>
                                     <th><span/></th>
                                 </tr>
@@ -49,18 +49,18 @@
                                 <tr>
                                     
                                     <td class="bg-light"><span t-field="doc.shipper_name_arabic"/></td>
-                                    <td><span>الشاحن</span></td>
+                                    <td><strong><span>الشاحن</span></strong></td>
                                     
-                                    <td><span t-field="doc.shipper_name_arabic"></span></td>
-                                    <td><span>الوكاله</span></td>
+                                    <td><span t-field="doc.shipper_name_arabic"/></td>
+                                    <td><strong><span>الوكاله</span></strong></td>
                                 </tr>
 
                                 <tr>
                                      <td class="bg-light"><span/></td>
-                                    <td><span>التصنيف</span></td>
+                                    <td><strong><span>التصنيف</span></strong></td>
                                    
                                     <td><span t-field="doc.price"/></td>
-                                    <td><span>قيمه التزكره</span></td>
+                                    <td><strong><span>قيمه التزكره</span></strong></td>
                                    
                                 </tr>
                             </tbody>
@@ -85,7 +85,7 @@
                                     </tr>
                                     <tr>
                                         
-                                        <td class="bg-light"><span t-field="doc.model_in_arabic"/></td>
+                                        <td class="bg-light"><span t-field="doc.model_in_english"/></td>
                                         <td>الموديل</td>
                                     </tr>
                                     <tr>
@@ -123,6 +123,5 @@
                 </t>
             </t>
         </t>
-
-             </template>
+    </template>
 </odoo>
