@@ -39,3 +39,5 @@ class CarTicket(models.Model):
     manufacturing_year = fields.Char(string="Manufacturing Year")
     plate_number = fields.Char(string="Plate Number")
     chassis_number = fields.Char(string="Chassis Number")
+    term = fields.Html(string='Term and Conditions')
+    note = fields.Html(string='Notes')
