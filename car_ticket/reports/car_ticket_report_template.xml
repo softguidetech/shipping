@@ -26,7 +26,7 @@
 
                                 <tr>
                                     <td colspan="3">
-                                        <span> <span t-field="doc.consignee_name_english"</span>
+                                        <span t-field="doc.consignee_name_english"></span>
                                     </td>
                                     <td><span>المستلم</span></td>
                                 </tr>
