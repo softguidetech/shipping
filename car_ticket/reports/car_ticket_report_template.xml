@@ -10,23 +10,24 @@
                         <table class="table o_main_table table-bordered h5 text-center" name="invoice_line_table">
                             <thead class="bg-light">
                                 <tr>
-                                    <th name="th_booking_no"><span></span></th>
-                                    <th name="th_ticket_type"><span>العباره</span></th>
-                                    <th name="th_ticket_no"><span t-field="doc.model_in_english.name"></span></th>
-                                    <th name="th_booking_no"><span></span></th>
+                                    <th><span/></th>
+                                    
+                                    <th><span t-field="doc.model_in_arabic.name"/></th>
+                                    <th><span>العباره</span></th>
+                                    <th><span/></th>
                                 </tr>
                                 <tr>
-                                    <th name="th_booking_no"><span></span></th>
-                                  
-                                    <th name="th_ticket_no"><span t-field="doc.model_in_english.name"></span></th>
-                                    <th name="th_dep_date"><span t-field="doc.origin_port.name"></span> - <span t-field="doc.destination_port.name"></span></th>
-                                    <th name="th_booking_no"><span></span></th>
+                                    <th><span/></th>
+                                    <th><span t-field="doc.origin_port.name"/> - <span t-field="doc.destination_port.name"/></th>
+                                    <th>الوجهه</th>
+                                    
+                                    <th><span/></th>
                                 </tr>
                                 <tr>
-                                    <th name="th_dep_date"><span>Dep. Date</span></th>
-                                    <th name="th_ticket_type"><span>Ticket Type</span></th>
-                                    <th name="th_ticket_no"><span>Ticket No.</span></th>
-                                    <th name="th_booking_no"><span>Booking No.</span></th>
+                                    <th><span>Dep. Date</span></th>
+                                    <th><span>Ticket Type</span></th>
+                                    <th><span>Ticket No.</span></th>
+                                    <th><span>Booking No.</span></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,24 +39,29 @@
                                 </tr>
 
                                 <tr>
-                                    <td colspan="3">
-                                        <span t-field="doc.consignee_name_english"></span>
-                                    </td>
                                     <td><span>المستلم</span></td>
+                                    <td colspan="3">
+                                        <span t-field="doc.consignee_name_arabic"/>
+                                    </td>
+                                    
                                 </tr>
 
                                 <tr>
+                                    
+                                    <td class="bg-light"><span t-field="doc.shipper_name_arabic"/></td>
                                     <td><span>الشاحن</span></td>
-                                    <td class="bg-light"><span t-field="doc.shipper_name_english"></span></td>
+                                    
+                                    <td><span t-field="doc.shipper_name_arabic"></span></td>
                                     <td><span>الوكاله</span></td>
-                                    <td><span>Oh my.</span></td>
                                 </tr>
 
                                 <tr>
+                                     <td class="bg-light"><span/></td>
                                     <td><span>التصنيف</span></td>
-                                    <td class="bg-light"><span>Oooooom</span></td>
+                                   
+                                    <td><span t-field="doc.price"/></td>
                                     <td><span>قيمه التزكره</span></td>
-                                    <td><span t-field="doc.price"></span></td>
+                                   
                                 </tr>
                             </tbody>
                         </table>
@@ -73,20 +79,24 @@
                             <div class="col-6">
                                 <table class="table table-bordered h5 text-center">
                                     <tr>
+                                        
+                                        <td class="bg-light"><span t-field="doc.chassis_number"/></td>
                                         <td>رقم الشاسي</td>
-                                        <td class="bg-light"><span t-field="doc.chassis_number"></span></td>
                                     </tr>
                                     <tr>
+                                        
+                                        <td class="bg-light"><span t-field="doc.model_in_arabic"/></td>
                                         <td>الموديل</td>
-                                        <td class="bg-light"><span t-field="doc.model_in_english"></span></td>
                                     </tr>
                                     <tr>
-                                        <td>سنه الصنع</td>
-                                        <td class="bg-light"><span t-field="doc.manufacturing_year"></span></td>
+                                       
+                                        <td class="bg-light"><span t-field="doc.manufacturing_year"/></td>
+                                         <td>سنه الصنع</td>
                                     </tr>
                                     <tr>
-                                        <td>رقم اللوحه</td>
-                                        <td class="bg-light"><span t-field="doc.plate_number"></span></td>
+                                       
+                                        <td class="bg-light"><span t-field="doc.plate_number"/></td>
+                                         <td>رقم اللوحه</td>
                                     </tr>
                                 </table>
                             </div>
@@ -97,21 +107,22 @@
                             <table class="table o_main_table table-bordered h5 text-center" name="invoice_line_table">
                                 <thead>
                                     <tr>
-                                        <th width="75%" name="th_dep_date_throw"><span>Tملاحظات</span></th>
-                                        <th class="bg-light" name="th_dep_date_throw"><span t-field="doc.note"></span></th>
+                                        
+                                        <th style="text-align:right;" name="th_dep_date_throw"><span t-field="doc.note"/></th>
+                                        <th style="text-align:right;" name="th_dep_date_throw"><span>ملاحظات</span></th>
                                     </tr>
                                 </thead>
                             </table>
                         </div>
 
-                        <div style="margin-top: 20px;">
-                            <h3>تعليمات التزاكر وشروط السفر</h3>
-                            <p><span t-field="doc.term"></span></p>
+                        <div style="margin-top: 20px;text-align:right;">
+                            <h3 style="text-align:right;">تعليمات التزاكر وشروط السفر</h3>
+                            <h3 style="text-align:right;" t-field="doc.term"/>
                         </div>
                     </div>
                 </t>
             </t>
         </t>
 
-    </template>
+             </template>
 </odoo>
