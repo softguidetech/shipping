@@ -41,6 +41,7 @@ class CarTicket(models.Model):
     chassis_number = fields.Char(string="Chassis Number")
     term = fields.Html(string='Term and Conditions')
     note = fields.Html(string='Notes')
+    state = fields.Selection([('draft','draft'),('submit','Submitted')],default='draft')
     
     def _count_invoice(self):
         invoice_ids = self.env['account.move'].search_count([('trip_id','=',self.id),('move_type','=','out_invoice')])
