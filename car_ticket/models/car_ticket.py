@@ -16,7 +16,7 @@ class CarTicket(models.Model):
         ('business', 'Business'),
         ('vip', 'VIP')
     ], string='Ticket Type', default='economy')
-    departure_date = fields.Datetime(string='Departure Date', required=True)
+    departure_date = fields.Datetime(string='Departure Date')
     route_no = fields.Char(string='Route Number')
     price = fields.Float(string='Price', required=True)
     passenger_name = fields.Char(string='Passenger Name')
