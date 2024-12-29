@@ -15,7 +15,7 @@
     "license": "LGPL-3",
 
     # Dependency
-    "depends": ['web', 'base','fleet'],
+    "depends": ['web', 'base','fleet','account'],
 
     "data": [
         "security/ir.model.access.csv",
