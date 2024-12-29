@@ -51,6 +51,8 @@
                             <field name="manufacturing_year"/>
                             <field name="plate_number"/>
                             <field name="chassis_number"/>
+                            <field name="term"/>
+                            <field name="note"/>
                         </group>
                     </group>
                 </sheet>
